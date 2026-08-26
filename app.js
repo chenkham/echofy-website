@@ -8,8 +8,7 @@ const CONFIG = {
   appName: 'Echofy',
   appPackage: 'com.Chenkham.Echofy',
   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.Chenkham.Echofy',
-  githubReleasesUrl: 'https://github.com/chenkham/Echofy-android/releases/latest',
-  universalApkDownloadUrl: 'https://github.com/chenkham/Echofy-android/releases/download/v4.9.0/Echofy_4.9.0_universal.apk',
+  universalApkDownloadUrl: 'https://drive.google.com/drive/folders/1EchofyReleases?usp=sharing',
   googleDriveMirrorUrl: 'https://drive.google.com/drive/folders/1EchofyReleases?usp=sharing', // Configurable Google Drive link
 };
 
