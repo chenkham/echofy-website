@@ -1,147 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Echofy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            min-height: 100vh;
-            color: #ffffff;
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 8px;
-            background: linear-gradient(135deg, #ffffff 0%, #a78bfa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .updated {
-            color: rgba(255, 255, 255, 0.5);
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin: 32px 0 16px;
-            color: #A855F7;
-        }
-
-        p,
-        ul {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 16px;
-        }
-
-        ul {
-            padding-left: 24px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #A855F7;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .back {
-            display: inline-block;
-            margin-bottom: 32px;
-            color: rgba(255, 255, 255, 0.6);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Echofy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    .legal-card {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+    }
+    h1 {
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff 0%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .updated {
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      font-size: 14px;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 32px 0 14px;
+      color: #c084fc;
+    }
+    p, ul {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    ul { padding-left: 24px; }
+    li { margin-bottom: 8px; }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      color: var(--accent-purple);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <a href="index.html" class="back">← Back to Home</a>
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: February 7, 2024</p>
+  <div class="bg-mesh"></div>
 
-        <h2>Introduction</h2>
-        <p>Echofy ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we
-            collect, use, and safeguard your information when you use our mobile application.</p>
+  <div class="legal-container">
+    <div class="legal-card">
+      <a href="index.html" class="back-btn">&larr; Back to Echofy</a>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: August 26, 2026</p>
 
-        <h2>Information We Collect</h2>
-        <p>We collect the following types of information:</p>
-        <ul>
-            <li><strong>Account Information:</strong> When you sign in with Google, we receive your name, email address,
-                and profile picture.</li>
-            <li><strong>Usage Data:</strong> We collect information about how you use the app, including listening
-                history and preferences.</li>
-            <li><strong>Device Information:</strong> We may collect device identifiers and technical information for
-                analytics and crash reporting.</li>
-        </ul>
+      <h2>1. Introduction</h2>
+      <p>Echofy ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy outlines our transparent approach to data collection, usage, and safeguarding when you use our mobile application and website.</p>
 
-        <h2>How We Use Your Information</h2>
-        <ul>
-            <li>To provide and maintain our service</li>
-            <li>To personalize your music experience</li>
-            <li>To process subscriptions and payments</li>
-            <li>To send important updates about the app</li>
-            <li>To improve our services through analytics</li>
-        </ul>
+      <h2>2. Information We Collect</h2>
+      <p>Echofy is built with a privacy-first mindset:</p>
+      <ul>
+        <li><strong>Local Data Storage:</strong> Your playlists, playback history, downloaded audio, dynamic theme settings, and favorites remain stored locally on your device unless you choose to sync them.</li>
+        <li><strong>Account Information:</strong> If you voluntarily authenticate (e.g. YouTube Music, Spotify, or Last.fm), we receive session credentials used solely on your device to query your playlists and library directly from their official APIs.</li>
+        <li><strong>Voice Assistant (Hey Jarvis):</strong> Voice commands and hotword detection run locally on your device or via standard on-device Android speech recognition. Audio streams are not recorded or sold.</li>
+        <li><strong>Echofy Jam Together:</strong> When joining a live shared session, room codes and playback synchronization signals (timestamp, play/pause state) are relayed in real-time through secure WebSocket/P2P channels without logging your personal conversations.</li>
+      </ul>
 
-        <h2>Third-Party Services</h2>
-        <p>We use the following third-party services:</p>
-        <ul>
-            <li><strong>Google Sign-In:</strong> For authentication</li>
-            <li><strong>Google Play Billing:</strong> For subscription management</li>
-            <li><strong>Google AdMob:</strong> For displaying advertisements (non-premium users)</li>
-            <li><strong>Firebase:</strong> For analytics, crash reporting, and cloud messaging</li>
-        </ul>
+      <h2>3. Third-Party Services & APIs</h2>
+      <p>Echofy interacts with legitimate public APIs to fetch track metadata and audio streams:</p>
+      <ul>
+        <li><strong>YouTube / YouTube Music API:</strong> Used to stream audio and retrieve album metadata.</li>
+        <li><strong>Spotify Web API:</strong> Used strictly for playlist reading when authorized by the user.</li>
+        <li><strong>Google AdMob:</strong> May display non-intrusive advertisements in compliance with Google Play Developer Program policies.</li>
+      </ul>
 
-        <h2>Data Security</h2>
-        <p>We implement appropriate security measures to protect your personal information. However, no method of
-            transmission over the internet is 100% secure.</p>
+      <h2>4. Data Security</h2>
+      <p>We implement industry-standard encryption (HTTPS/TLS) for all network communications. We do not sell, rent, or trade your personal data to any third parties.</p>
 
-        <h2>Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access your personal data</li>
-            <li>Request deletion of your data</li>
-            <li>Opt-out of personalized advertising</li>
-            <li>Withdraw consent at any time</li>
-        </ul>
-
-        <h2>Children's Privacy</h2>
-        <p>Our service is not intended for children under 13. We do not knowingly collect personal information from
-            children under 13.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new
-            policy on this page.</p>
-
-        <h2>Contact Us</h2>
-        <p>If you have questions about this Privacy Policy, please contact us at:</p>
-        <p><a href="mailto:support@echofy.app">support@echofy.app</a></p>
+      <h2>5. Contact Us</h2>
+      <p>If you have any questions regarding this Privacy Policy, please contact us at: <a href="mailto:chenkhamchowlu@gmail.com" style="color: #c084fc;">chenkhamchowlu@gmail.com</a>.</p>
     </div>
+  </div>
 </body>
-
 </html>
