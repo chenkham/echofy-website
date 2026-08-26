@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Echofy - Redirecting...</title>
+  <script>
+    // GitHub Pages SPA router
+    // When a clean route like /track/123 or /jam/ABC is requested, GitHub Pages serves 404.html.
+    // This script converts the path into query parameters and instantly redirects to index.html.
+    (function() {
+      var fullPath = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      // Handle repository subdirectory if hosted on /echofy-website/
+      var repoBase = '';
+      if (fullPath.indexOf('/echofy-website') === 0) {
+        repoBase = '/echofy-website';
+        fullPath = fullPath.substring('/echofy-website'.length);
+      }
+
+      var segments = fullPath.split('/').filter(Boolean);
+      if (segments.length >= 2) {
+        var type = segments[0].toLowerCase();
+        var id = segments[1];
+        
+        var queryParams = new URLSearchParams(search);
+        queryParams.set(type, id);
+        
+        var newUrl = repoBase + '/?' + queryParams.toString() + hash;
+        window.location.replace(newUrl);
+      } else if (segments.length === 1) {
+        var queryParams = new URLSearchParams(search);
+        var newUrl = repoBase + '/' + (search ? search : '') + hash;
+        window.location.replace(newUrl);
+      } else {
+        window.location.replace(repoBase + '/' + search + hash);
+      }
+    })();
+  </script>
+</head>
+<body style="background:#07070a;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+  <p>Redirecting to Echofy...</p>
+</body>
+</html>
