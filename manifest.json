@@ -1,0 +1,21 @@
+{
+  "name": "Echofy - Premium Music",
+  "short_name": "Echofy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07070a",
+  "theme_color": "#07070a",
+  "description": "Stream lossless music, enjoy real-time Jam Together listening, and custom OLED glass UI.",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

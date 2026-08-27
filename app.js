@@ -164,6 +164,53 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (jamBox) jamBox.style.display = 'none';
 
+      // 30-Second Web Audio Preview Player
+      const previewPlayer = document.getElementById('web-preview-player');
+      const btnPreviewPlay = document.getElementById('btn-preview-play');
+      const playIcon = document.getElementById('preview-play-icon');
+      const pauseIcon = document.getElementById('preview-pause-icon');
+      const waveformBars = document.getElementById('waveform-bars');
+      const ytContainer = document.getElementById('yt-player-container');
+      let isPlaying = false;
+      let previewTimer = null;
+
+      if (previewPlayer && btnPreviewPlay) {
+        previewPlayer.style.display = 'flex';
+        btnPreviewPlay.onclick = () => {
+          if (!isPlaying) {
+            isPlaying = true;
+            if (playIcon) playIcon.style.display = 'none';
+            if (pauseIcon) pauseIcon.style.display = 'block';
+            if (waveformBars) waveformBars.classList.add('playing');
+
+            // Embed audio stream without leaving page
+            if (ytContainer) {
+              ytContainer.innerHTML = `<iframe width="1" height="1" src="https://www.youtube-nocookie.com/embed/${context.id}?autoplay=1&enablejsapi=1" frameborder="0" allow="autoplay"></iframe>`;
+            }
+
+            // 30-second preview limit
+            clearTimeout(previewTimer);
+            previewTimer = setTimeout(() => {
+              if (isPlaying) {
+                isPlaying = false;
+                if (playIcon) playIcon.style.display = 'block';
+                if (pauseIcon) pauseIcon.style.display = 'none';
+                if (waveformBars) waveformBars.classList.remove('playing');
+                if (ytContainer) ytContainer.innerHTML = '';
+                showToast('Preview complete. Tap "Play in Echofy" for lossless sound!');
+              }
+            }, 30000);
+          } else {
+            isPlaying = false;
+            if (playIcon) playIcon.style.display = 'block';
+            if (pauseIcon) pauseIcon.style.display = 'none';
+            if (waveformBars) waveformBars.classList.remove('playing');
+            if (ytContainer) ytContainer.innerHTML = '';
+            clearTimeout(previewTimer);
+          }
+        };
+      }
+
       // Auto-attempt launch on mobile Android browsers
       if (/Android/i.test(navigator.userAgent)) {
         setTimeout(() => {
@@ -184,6 +231,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (sharedArt) sharedArt.style.display = 'none';
       if (jamBox) jamBox.style.display = 'flex';
       if (jamCodeDisplay) jamCodeDisplay.textContent = roomCode;
+
+      const jamStatusBadge = document.getElementById('jam-status-badge');
+      if (jamStatusBadge) jamStatusBadge.style.display = 'flex';
 
       if (btnCopyJam) {
         btnCopyJam.onclick = () => {

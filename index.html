@@ -27,6 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -75,6 +76,31 @@
           <span id="shared-badge" class="shared-badge">🎵 Shared Item</span>
           <h2 id="shared-title" class="shared-title">Loading track...</h2>
           <p id="shared-subtitle" class="shared-subtitle">Listen seamlessly in high quality on Echofy</p>
+
+          <!-- Jam Live Status Indicator -->
+          <div id="jam-status-badge" class="jam-pulse-status" style="display: none;">
+            <span class="pulse-circle"></span>
+            <span>Live Jam Session Ready to Sync</span>
+          </div>
+
+          <!-- Web Audio Preview Player -->
+          <div id="web-preview-player" class="web-preview-player" style="display: none;">
+            <button id="btn-preview-play" class="btn-preview-play" type="button" aria-label="Play Preview">
+              <svg id="preview-play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              <svg id="preview-pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+            </button>
+            <div class="preview-info">
+              <span class="preview-label">30s Web Preview</span>
+              <div class="waveform-anim" id="waveform-bars">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div id="yt-player-container" style="position: absolute; width: 1px; height: 1px; opacity: 0.01; pointer-events: none;"></div>
+          </div>
 
           <div class="shared-actions">
             <button id="btn-open-app" class="btn-open-app" type="button">
