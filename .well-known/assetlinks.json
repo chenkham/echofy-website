@@ -1,0 +1,15 @@
+﻿[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.Chenkham.Echofy",
+      "sha256_cert_fingerprints": [
+        "AA:89:A8:A5:EF:F0:63:56:6B:0B:E3:9F:E8:55:02:DE:E6:5F:E5:C0:10:BA:CC:7C:8B:12:14:FC:23:71:AB:96"
+      ]
+    }
+  }
+]
